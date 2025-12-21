@@ -5,21 +5,23 @@
 class Spawn < Formula
   desc "Launch ephemeral AWS EC2 instances effortlessly"
   homepage "https://github.com/scttfrdmn/mycelium"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
+
+  depends_on "truffle" => :runtime
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.0/spawn_0.1.0_darwin_amd64.tar.gz"
-      sha256 "3bca23576cd4c4edd8e8eb95c1c91c02ab494befc5cce173ea0f28f5f4cceba6"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.1/spawn_0.1.1_darwin_amd64.tar.gz"
+      sha256 "a807584809e98b5d5b30600f74b7c64e67835d69c2e5ebea33a1de59496e65c8"
 
       def install
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.0/spawn_0.1.0_darwin_arm64.tar.gz"
-      sha256 "d2c6785d53ebb8f5165656c9864e4ed878b85309a391c04602e3ef0290db5dc7"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.1/spawn_0.1.1_darwin_arm64.tar.gz"
+      sha256 "3165508fa3694f6e0147da3d91109f3a50aa38d0b3819532139247039e4c69b5"
 
       def install
         bin.install "spawn"
@@ -29,15 +31,15 @@ class Spawn < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.0/spawn_0.1.0_linux_amd64.tar.gz"
-      sha256 "2dec39c9844950b48b6eb6eb7eed9cacc1ad4235c9c4dd48d3ac1463e4ee11d5"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.1/spawn_0.1.1_linux_amd64.tar.gz"
+      sha256 "214535144faca65cf7646340c481719ad4ace60b5a67e89d731c90612c429fe2"
       def install
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.0/spawn_0.1.0_linux_arm64.tar.gz"
-      sha256 "bb7b43549e7dde013793e82b0450c97d0233774f074f4137bf4eb0dcefb3c56a"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.1.1/spawn_0.1.1_linux_arm64.tar.gz"
+      sha256 "477850fe10718d3e3d62fed2ab5716d7fc5370e7f8318a62ae1b018a9d525338"
       def install
         bin.install "spawn"
       end
