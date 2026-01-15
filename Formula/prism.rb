@@ -5,15 +5,15 @@
 class Prism < Formula
   desc "CLI tool for launching pre-configured cloud workstations for academic research"
   homepage "https://github.com/scttfrdmn/prism"
-  version "0.6.3"
+  version "0.7.0"
   license "MIT"
 
   depends_on "go" => :build
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/prism/releases/download/v0.6.3/prism_0.6.3_darwin_x86_64.tar.gz"
-      sha256 "ec015ed28ec5851de177c43b1b4052b8ca8e9cc33161303243ed1f7957086123"
+      url "https://github.com/scttfrdmn/prism/releases/download/v0.7.0/prism_0.7.0_darwin_x86_64.tar.gz"
+      sha256 "c2bbb9276515cf06de3e5b7184fd17774449d6dd8a2a2923f75b74eff376e278"
 
       def install
         bin.install "prism"
@@ -31,8 +31,8 @@ class Prism < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/prism/releases/download/v0.6.3/prism_0.6.3_darwin_arm64.tar.gz"
-      sha256 "16d8e27ef8902f6a8257d76e3ed1ee4c7c110612c906e3cdbe54dd8076923f67"
+      url "https://github.com/scttfrdmn/prism/releases/download/v0.7.0/prism_0.7.0_darwin_arm64.tar.gz"
+      sha256 "7c2610c909a8a3434f961f96fc710d5afc462dcd58d7db8e9426206e2ad57ed8"
 
       def install
         bin.install "prism"
@@ -53,8 +53,8 @@ class Prism < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/prism/releases/download/v0.6.3/prism_0.6.3_linux_x86_64.tar.gz"
-      sha256 "62e8c29d19e7615a55b44400e36201f457dfd4cb4d577459289239518cc957ef"
+      url "https://github.com/scttfrdmn/prism/releases/download/v0.7.0/prism_0.7.0_linux_x86_64.tar.gz"
+      sha256 "0294947b9a4299ecd9c4d1af730002c68e0a9c2c7cbab1409f371d1807e7d35a"
       def install
         bin.install "prism"
         bin.install "prismd"
@@ -71,8 +71,8 @@ class Prism < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/prism/releases/download/v0.6.3/prism_0.6.3_linux_arm64.tar.gz"
-      sha256 "8bee3ec59c1d6d1fc2112abe9e348049df257c1590128998b0bc83b92c3ff2ef"
+      url "https://github.com/scttfrdmn/prism/releases/download/v0.7.0/prism_0.7.0_linux_arm64.tar.gz"
+      sha256 "250a39b24b32291ba321a2e06d58c293603f037e237be63e6f2cf8ee26449886"
       def install
         bin.install "prism"
         bin.install "prismd"
