@@ -5,23 +5,23 @@
 class Spawn < Formula
   desc "Launch ephemeral AWS EC2 instances effortlessly"
   homepage "https://github.com/scttfrdmn/mycelium"
-  version "0.11.0"
+  version "0.12.0"
   license "MIT"
 
   depends_on "scttfrdmn/tap/truffle" => :runtime
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.11.0/spawn_0.11.0_darwin_amd64.tar.gz"
-      sha256 "7c7a946ea8cf0276265ec034f2a529fde40b9a242bef7c6873c9a1ed292ea7b7"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.12.0/spawn_0.12.0_darwin_amd64.tar.gz"
+      sha256 "1d447b56e1f9db7331bfb449bfd1800a56de989c3744613cd23a46bc952cac7b"
 
       def install
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.11.0/spawn_0.11.0_darwin_arm64.tar.gz"
-      sha256 "665392376d1e67afe7656e6adada38660a92c056cd7ae59f24c087e3820e2010"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.12.0/spawn_0.12.0_darwin_arm64.tar.gz"
+      sha256 "1b406ba430eb43ecbe3138e9f6a3d8f2316e8d672ebd87342b46dcd715488876"
 
       def install
         bin.install "spawn"
@@ -31,15 +31,15 @@ class Spawn < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.11.0/spawn_0.11.0_linux_amd64.tar.gz"
-      sha256 "476bd97449ca6a09c833e1c9df8af0d12149848413b9648064a7093c114ee416"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.12.0/spawn_0.12.0_linux_amd64.tar.gz"
+      sha256 "56d156131218ce1b67ca55a2aa8bedfef2b6f3d985584df7e48a736513bc10ae"
       def install
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.11.0/spawn_0.11.0_linux_arm64.tar.gz"
-      sha256 "b45c13f054d28ba2514ced50f50670abd498504aed5f35ae0ed63ca6f56fae3f"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.12.0/spawn_0.12.0_linux_arm64.tar.gz"
+      sha256 "d98590bde2123fa0054ebd983f662d49699a4dbbb5b4b17169cd1622a40f1a57"
       def install
         bin.install "spawn"
       end
