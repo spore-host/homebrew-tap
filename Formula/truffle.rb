@@ -11,7 +11,7 @@ class Truffle < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_darwin_amd64.tar.gz"
-      sha256 "ab17d6ffb7eb0f32ea1a138b533ae0f8ee8c4eb804954c3d0b2a15cfd1e7d42e"
+      sha256 "f3ac9191e1d26fc4505a024a22affb9203bd7b061d4dab8a6d7caae10ed45e75"
 
       def install
         bin.install "truffle"
@@ -19,7 +19,7 @@ class Truffle < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_darwin_arm64.tar.gz"
-      sha256 "d762f3adcb05733615b98bfaafcc3269f4f22b51836ff2a553d7515862630138"
+      sha256 "36d83101d51dd890234165cf4d0d749f67b5e1dcbdd13a615e6a4d85e4aa910d"
 
       def install
         bin.install "truffle"
@@ -30,14 +30,14 @@ class Truffle < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_linux_amd64.tar.gz"
-      sha256 "c0a8352dcf64f2aaf01b2f6eac66f4e4f73f3ec7bedd3a8b679b8527c6e91f2f"
+      sha256 "9c43b48d051ec20f2a9479eb6c4309c55b6c552323c4fd20b0a30c6f82518cde"
       def install
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_linux_arm64.tar.gz"
-      sha256 "98b94ebc1295dfd9cd1b8fef94eff2bef6b55b93fdd1d5c608137da0cccd41a6"
+      sha256 "37fb6e9f6a20124a28f2932b95b1e8c5acbc5581a7a1f2c7be33ed92871ada6b"
       def install
         bin.install "truffle"
       end
