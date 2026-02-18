@@ -13,7 +13,7 @@ class Spawn < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/spawn_0.22.0_darwin_amd64.tar.gz"
-      sha256 "b882b37c7f24db8baca96925389fea4f71693dad1095f5ed00592fee25cdd415"
+      sha256 "2a66255873ebe438165b1d51d9b2dd0242923f93a1667e2b4e3d132fc97be770"
 
       def install
         bin.install "spawn"
@@ -21,7 +21,7 @@ class Spawn < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/spawn_0.22.0_darwin_arm64.tar.gz"
-      sha256 "3a1a3ea5bc622ea3b9c35170c5488468bccc2bc9cc3b2f034e34a69376c7f4e8"
+      sha256 "a6bc7606f360d4fa580285341745c814d2a58b654c5504731a32de2af22d190e"
 
       def install
         bin.install "spawn"
@@ -32,14 +32,14 @@ class Spawn < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/spawn_0.22.0_linux_amd64.tar.gz"
-      sha256 "96f0cb07d67df98b5e845903f40d253105d6db30d96aa7fbda49163fb30fc8df"
+      sha256 "c884596091d5b207df7018ec55d61361faf63f5f814d3bd22d5f676fccb8643d"
       def install
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/spawn_0.22.0_linux_arm64.tar.gz"
-      sha256 "ffeef68750cc5811032605f11b22638c693b7dd44ce0f7edaa9004d40d08b104"
+      sha256 "fac10f8caadd1fe98e8a11c1ee37d3f75ea1772c5739a97bd89a848a92d9cbf1"
       def install
         bin.install "spawn"
       end
