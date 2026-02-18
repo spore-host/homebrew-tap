@@ -5,21 +5,21 @@
 class Truffle < Formula
   desc "Find and discover AWS EC2 instance types"
   homepage "https://github.com/scttfrdmn/mycelium"
-  version "0.21.0"
+  version "0.22.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.21.0/truffle_0.21.0_darwin_amd64.tar.gz"
-      sha256 "28ff1ebb8242cd39f972c5eacc89ee6c011cc23452fdb0b44ac04b09b87e6d1d"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_darwin_amd64.tar.gz"
+      sha256 "ab17d6ffb7eb0f32ea1a138b533ae0f8ee8c4eb804954c3d0b2a15cfd1e7d42e"
 
       def install
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.21.0/truffle_0.21.0_darwin_arm64.tar.gz"
-      sha256 "d2b7268a333367508a12f696756412c91ebeeead798fb1d008fcc9eabb948f5a"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_darwin_arm64.tar.gz"
+      sha256 "d762f3adcb05733615b98bfaafcc3269f4f22b51836ff2a553d7515862630138"
 
       def install
         bin.install "truffle"
@@ -29,15 +29,15 @@ class Truffle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.21.0/truffle_0.21.0_linux_amd64.tar.gz"
-      sha256 "f5f315c66b2018151cab03fe763e83676cd5f022872490c4a685e1920455a8ba"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_linux_amd64.tar.gz"
+      sha256 "c0a8352dcf64f2aaf01b2f6eac66f4e4f73f3ec7bedd3a8b679b8527c6e91f2f"
       def install
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.21.0/truffle_0.21.0_linux_arm64.tar.gz"
-      sha256 "2d7bc4704411c7b75f781477d525b1e5c74f7812a51f43964f30f3e674b85838"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.22.0/truffle_0.22.0_linux_arm64.tar.gz"
+      sha256 "98b94ebc1295dfd9cd1b8fef94eff2bef6b55b93fdd1d5c608137da0cccd41a6"
       def install
         bin.install "truffle"
       end
