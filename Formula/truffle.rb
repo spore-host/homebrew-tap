@@ -5,23 +5,23 @@
 class Truffle < Formula
   desc "Find and discover AWS EC2 instance types"
   homepage "https://github.com/scttfrdmn/mycelium"
-  version "0.24.1"
+  version "0.24.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.1/truffle_0.24.1_darwin_amd64.tar.gz"
-      sha256 "9ec8f4af654080f77b4af6e74724c5d2bdf25b0d1f4b9b36450e50764da9338f"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.2/truffle_0.24.2_darwin_amd64.tar.gz"
+      sha256 "40ce62d37bd78d24ee852e78305bde9885d7571f4d7d12e2c5a68fcea22659fa"
 
-      def install
+      define_method(:install) do
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.1/truffle_0.24.1_darwin_arm64.tar.gz"
-      sha256 "4db142f37f07d0803913f99920c97b1055d84c62aa3b1840e2092bc61784d867"
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.2/truffle_0.24.2_darwin_arm64.tar.gz"
+      sha256 "35753888c782d5b0fd4fb6fb54fb3c8b8886773adb90ab62830ba759f38ae77b"
 
-      def install
+      define_method(:install) do
         bin.install "truffle"
       end
     end
@@ -29,16 +29,16 @@ class Truffle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.1/truffle_0.24.1_linux_amd64.tar.gz"
-      sha256 "3e678df1c8155dd0482846d31853c569288c5c6c981c7794cd4ef1a87ebc2548"
-      def install
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.2/truffle_0.24.2_linux_amd64.tar.gz"
+      sha256 "ed87bc3cf1ec80a50229b82af5ee050aabd40594276135aaab469f97818433d0"
+      define_method(:install) do
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.1/truffle_0.24.1_linux_arm64.tar.gz"
-      sha256 "4a1abb4f16806c79d8e39cda1f38dbfc9496db2ce36f7786be1c46740f258ff2"
-      def install
+      url "https://github.com/scttfrdmn/mycelium/releases/download/v0.24.2/truffle_0.24.2_linux_arm64.tar.gz"
+      sha256 "21617cf7987cea6dc3816617a637b7fd13aed076c34ebcad5dcd1a7182e4c25a"
+      define_method(:install) do
         bin.install "truffle"
       end
     end
