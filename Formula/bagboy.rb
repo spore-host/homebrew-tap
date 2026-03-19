@@ -15,7 +15,8 @@ class Bagboy < Formula
   end
 
   def install
-    bin.install "bagboy"
+    arch_suffix = Hardware::CPU.intel? ? "amd64" : "arm64"
+    bin.install "bagboy-darwin-#{arch_suffix}" => "bagboy"
   end
 
   test do
