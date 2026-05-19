@@ -11,7 +11,7 @@ class Truffle < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/truffle_0.34.8_darwin_amd64.tar.gz"
-      sha256 "eb78f4199e450e7d4c757eadd8c9eaffce0c7a3c0ca62fa8e21275bacd6ecffa"
+      sha256 "b2d710d1e848dcb1e1c96b82125cc098e3b3e133f4e3b60ae4ea6c23a9666c35"
 
       define_method(:install) do
         bin.install "truffle"
@@ -19,7 +19,7 @@ class Truffle < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/truffle_0.34.8_darwin_arm64.tar.gz"
-      sha256 "27503ebb8044f55bed10e684340b506962f2fa694a996cdc27b3cbd851b00cc3"
+      sha256 "7c642282f00caa2f4ebf55e44988363f31acfed3baa1f224ffebdd3b163138d1"
 
       define_method(:install) do
         bin.install "truffle"
@@ -30,14 +30,14 @@ class Truffle < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/truffle_0.34.8_linux_amd64.tar.gz"
-      sha256 "c6ca87e26f642798bcf7133e3f07d3ca8e4b4cea88b9c7a8537b14ceac056b60"
+      sha256 "099c9aed81b78f5da1b2332a90fd403417a96d0c31d1908ef2864eed2c93837b"
       define_method(:install) do
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/truffle_0.34.8_linux_arm64.tar.gz"
-      sha256 "3100ee412097b061075a2c289127a155bb1bc27026d6846f08a4d42ef334d6b1"
+      sha256 "958fcf556c1e968b484f5122352275b97928419fe5376a3f3c279bd60bdd5663"
       define_method(:install) do
         bin.install "truffle"
       end
