@@ -11,7 +11,7 @@ class SporeHostMcp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spore-host-mcp_0.34.8_darwin_amd64.tar.gz"
-      sha256 "323786c9e56e85a0a3aaeed72961b0bd2c5d8e8ba33d440df69be376b4abc367"
+      sha256 "e30feb4ac12f3b6471551e907fc31776f3cde76683a20159042dbced845c8f80"
 
       define_method(:install) do
         bin.install "spore-host-mcp"
@@ -19,7 +19,7 @@ class SporeHostMcp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spore-host-mcp_0.34.8_darwin_arm64.tar.gz"
-      sha256 "1d67904516e632f90b9c81b1ad1aa73675c8ed1fcaa78ea8852083b65bb7d33e"
+      sha256 "e204783387bdfcb535fda2671a80604145fc6348545cb53d15c262904ca00a40"
 
       define_method(:install) do
         bin.install "spore-host-mcp"
@@ -30,14 +30,14 @@ class SporeHostMcp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spore-host-mcp_0.34.8_linux_amd64.tar.gz"
-      sha256 "6bcad6d1e153ef84809fe6aac0b7aec28ec5a178aa0d71ed4fcbc287aecd7fc5"
+      sha256 "fc28965fa13096278a36869f6fc655f3bcd37ac1668e3a8622110dfe0eb5fd99"
       define_method(:install) do
         bin.install "spore-host-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spore-host-mcp_0.34.8_linux_arm64.tar.gz"
-      sha256 "a82e482b3f93494e6f433abc900c478c090675defd572e7c34a889c2ccdb6008"
+      sha256 "ebb2812e0205d2f924f7d61eadcdcfe22954d57bfa023f4b2eb2e74be2205545"
       define_method(:install) do
         bin.install "spore-host-mcp"
       end
