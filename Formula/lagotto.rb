@@ -13,7 +13,7 @@ class Lagotto < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/lagotto_0.34.8_darwin_amd64.tar.gz"
-      sha256 "2db202e893151652d51943fa5cee26dcca91bc3c54455ad7eaeb75289681d34d"
+      sha256 "b6c776a62a3f8f291d0178019f1b7a9d499efdc1f344c9e0c839807cabcacdff"
 
       define_method(:install) do
         bin.install "lagotto"
@@ -21,7 +21,7 @@ class Lagotto < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/lagotto_0.34.8_darwin_arm64.tar.gz"
-      sha256 "b1e4bd0f26d28343d4639663434fecd4f50ad8824de261b1290d2870e711f5fe"
+      sha256 "397e7f027fe035b91c2100863e980560d7a7036fdf0f67f44a06dc8a096e9a46"
 
       define_method(:install) do
         bin.install "lagotto"
@@ -32,14 +32,14 @@ class Lagotto < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/lagotto_0.34.8_linux_amd64.tar.gz"
-      sha256 "31ebea106f5e07c14ea06da3e7514856b078b7954ea4c137a1eef972308b7949"
+      sha256 "d6c3d22e58d20668ed5270c5dd3adbdaee11ea32ec23dfc7f383227e4d17cf2e"
       define_method(:install) do
         bin.install "lagotto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/lagotto_0.34.8_linux_arm64.tar.gz"
-      sha256 "aa5bfda18aa566a804c6e686d2018e62ddb1437dc58f2d3302033cf9d4d06942"
+      sha256 "12846fb70fae99dfe73d9edbb177530ee4848cace350a83043229da46410675d"
       define_method(:install) do
         bin.install "lagotto"
       end
