@@ -13,7 +13,7 @@ class Spawn < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spawn_0.34.8_darwin_amd64.tar.gz"
-      sha256 "fb86daf0f5a5a720b1ef4cc3e04e88ef4720657165a3e4e0111c818a32781da4"
+      sha256 "77f6c63e0e3ee45325ea6a577383e7aaddaa3fdcc583276b18b3cbfc1079a021"
 
       define_method(:install) do
         bin.install "spawn"
@@ -21,7 +21,7 @@ class Spawn < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spawn_0.34.8_darwin_arm64.tar.gz"
-      sha256 "f82b049c19990c584d22836b58407ebf3c9cb897aeecd8c73154431e8f7f8300"
+      sha256 "e29de369a1d702ed4b97eb90dde8791221ce8a5c5da3391ef0e05c73e4770ac4"
 
       define_method(:install) do
         bin.install "spawn"
@@ -32,14 +32,14 @@ class Spawn < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spawn_0.34.8_linux_amd64.tar.gz"
-      sha256 "e6eac6ee8af4714e0461df409a5b58e1e88ceb40f25cd41b3cb828481e5df559"
+      sha256 "d4cee3128c8d8e31da6d0671f2bee88b9e086734659746a36e6cb37546b5a1f6"
       define_method(:install) do
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/spore-host/spore-host/releases/download/v0.34.8/spawn_0.34.8_linux_arm64.tar.gz"
-      sha256 "c0828cf0ec9f054ba2289c8f18d5ba4db69dccd03c982ad4c2e3055495b8e3a6"
+      sha256 "64a6f2485007bc1478ef25c2b6001070c0e9753db3d36aa9d2668fd501c82bcd"
       define_method(:install) do
         bin.install "spawn"
       end
