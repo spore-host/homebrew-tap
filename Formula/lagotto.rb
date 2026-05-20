@@ -5,23 +5,23 @@
 class Lagotto < Formula
   desc "Watch for EC2 instance capacity across regions"
   homepage "https://github.com/spore-host/spore-host"
-  version "0.34.10"
+  version "0.34.11"
   license "Apache-2.0"
 
   depends_on "spore-host/tap/truffle" => :runtime
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/spore-host/spore-host/releases/download/v0.34.10/lagotto_0.34.10_darwin_amd64.tar.gz"
-      sha256 "c92fda2582b511770b8e9aff6a0c9b3d06d83e8aeb13a3ef6bb255dde8a4f9de"
+      url "https://github.com/spore-host/spore-host/releases/download/v0.34.11/lagotto_0.34.11_darwin_amd64.tar.gz"
+      sha256 "dc68d23dbb5617bc0f26a6ce75a3620ac6b68fb1b2d1f55bf36ccd83b573f927"
 
       define_method(:install) do
         bin.install "lagotto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/spore-host/spore-host/releases/download/v0.34.10/lagotto_0.34.10_darwin_arm64.tar.gz"
-      sha256 "d9a71a5aafcd10d5899c72603087cb46955a276aa9fe190be5fa6458fef6044f"
+      url "https://github.com/spore-host/spore-host/releases/download/v0.34.11/lagotto_0.34.11_darwin_arm64.tar.gz"
+      sha256 "04f58b2682f731419d6aa7c4f37fa239d950e8a3c36bdad16cb2637e1cb570d2"
 
       define_method(:install) do
         bin.install "lagotto"
@@ -31,15 +31,15 @@ class Lagotto < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/spore-host/releases/download/v0.34.10/lagotto_0.34.10_linux_amd64.tar.gz"
-      sha256 "12da92b08e0dfeabf8fd0b4eecd1fca56a29633ca0670eee19e574eaecbb8ce5"
+      url "https://github.com/spore-host/spore-host/releases/download/v0.34.11/lagotto_0.34.11_linux_amd64.tar.gz"
+      sha256 "3914ed6f53a139b7b2a96272adce3118440d8302b9b10f667e687118d126a3c6"
       define_method(:install) do
         bin.install "lagotto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/spore-host/releases/download/v0.34.10/lagotto_0.34.10_linux_arm64.tar.gz"
-      sha256 "6efeada1e1140a257fa726c1c793bc7512ab8fed8854ee01f373223fa4641b1c"
+      url "https://github.com/spore-host/spore-host/releases/download/v0.34.11/lagotto_0.34.11_linux_arm64.tar.gz"
+      sha256 "94052fab7ef93eb84a934112d299d91947aef41b269d4a323d517fadcc4639e7"
       define_method(:install) do
         bin.install "lagotto"
       end
