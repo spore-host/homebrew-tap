@@ -1,89 +1,43 @@
-# Scott Friedman's Homebrew Tap
+# spore.host Homebrew Tap
 
-Official Homebrew tap for tools developed by Scott Friedman.
+Official Homebrew tap for [spore.host](https://spore.host) — tools for launching and managing ephemeral AWS EC2 instances.
 
-## Available Formulae
+## Available formulae
 
-### [SynoDeploy](https://github.com/scttfrdmn/synodeploy)
-Deploy containers to Synology DSM 7.2+ with ease.
-
-```bash
-brew install scttfrdmn/tap/synodeploy
-```
-
-**Features:**
-- 🚀 One-command container deployment
-- 🔐 SSH key & ssh-agent support
-- 👤 Administrator user compatibility
-- 📦 docker-compose support
-- 🎯 DSM 7.2+ optimized
-- 🧪 Integration tested on real hardware
+| Formula | Description |
+|---------|-------------|
+| `truffle` | Find EC2 instance types, compare spot prices, check quotas |
+| `spawn` | Launch and manage EC2 instances with automatic lifecycle management |
+| `lagotto` | Watch for EC2 capacity and act when it appears |
+| `spore-host-mcp` | MCP server for AI assistants (Claude, Cursor) |
 
 ## Installation
 
 ```bash
 # Add the tap
-brew tap scttfrdmn/tap
+brew tap spore-host/tap
 
-# Install any formula
-brew install <formula-name>
-
-# Example: Install SynoDeploy
-brew install synodeploy
+# Install a tool
+brew install spore-host/tap/truffle
+brew install spore-host/tap/spawn
+brew install spore-host/tap/lagotto
+brew install spore-host/tap/spore-host-mcp
 ```
 
-## Usage
+## Documentation
 
-### SynoDeploy
-```bash
-# Setup connection to your Synology NAS
-synodeploy init your-nas.local --user your-username
+Full documentation at [spore.host](https://spore.host).
 
-# Deploy a container
-synodeploy run nginx:latest --port 8080:80
+Each tool is developed in its own repository:
+- [spore-host/truffle](https://github.com/spore-host/truffle)
+- [spore-host/spawn](https://github.com/spore-host/spawn)
+- [spore-host/lagotto](https://github.com/spore-host/lagotto)
+- [spore-host/spore-host-mcp](https://github.com/spore-host/spore-host-mcp)
 
-# Deploy from docker-compose
-synodeploy deploy docker-compose.yml
+## Automated updates
 
-# List containers
-synodeploy ps
+Formulae are updated automatically via GoReleaser when each tool publishes a new release.
 
-# Remove container
-synodeploy rm container-name
-```
+## License
 
-## Requirements
-
-### For SynoDeploy
-- **Synology NAS**: DSM 7.2+ with Container Manager
-- **SSH Access**: Enabled with key-based authentication or ssh-agent
-- **Network Access**: Local network connectivity to your NAS
-
-## Support
-
-- 📖 [SynoDeploy Documentation](https://github.com/scttfrdmn/synodeploy/tree/main/docs)
-- 🐛 [Issue Tracker](https://github.com/scttfrdmn/synodeploy/issues)
-- 💬 [Discussions](https://github.com/scttfrdmn/synodeploy/discussions)
-
-## Contributing
-
-If you'd like to contribute a formula to this tap:
-
-1. Fork this repository
-2. Create a new formula in the `Formula/` directory
-3. Test the formula locally
-4. Submit a pull request
-
-### Formula Guidelines
-- Follow [Homebrew Formula Cookbook](https://docs.brew.sh/Formula-Cookbook)
-- Include a proper `test do` block
-- Use semantic versioning
-- Include comprehensive documentation
-
-## About
-
-This tap is maintained by [Scott Friedman](https://github.com/scttfrdmn) and contains formulae for various development tools and utilities.
-
-**License:** Individual formulae may have different licenses. Check each formula for specific license information.
-
-**Automated Updates:** This tap is automatically updated via GitHub Actions and GoReleaser when new releases are published.
+Apache 2.0 — Copyright 2025-2026 Scott Friedman.
