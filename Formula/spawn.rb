@@ -5,23 +5,23 @@
 class Spawn < Formula
   desc "Launch ephemeral AWS EC2 instances effortlessly"
   homepage "https://github.com/spore-host/spawn"
-  version "0.83.1"
+  version "0.84.0"
   license "Apache-2.0"
 
   depends_on "spore-host/tap/truffle" => :runtime
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/spore-host/spawn/releases/download/v0.83.1/spawn_0.83.1_darwin_amd64.tar.gz"
-      sha256 "2af0a4bd38160eb85f0ee19f3caef05ddaae6614d099287c06ec6910982ebc81"
+      url "https://github.com/spore-host/spawn/releases/download/v0.84.0/spawn_0.84.0_darwin_amd64.tar.gz"
+      sha256 "bf7d00294d18dc5642d438bfaf20d2ad20a37bf68df6d0e64854e8016699ac84"
 
       define_method(:install) do
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/spore-host/spawn/releases/download/v0.83.1/spawn_0.83.1_darwin_arm64.tar.gz"
-      sha256 "a8bd21ff9a28ef4c3f6602c929da600b969c16c1a073e74a308136e99b44adeb"
+      url "https://github.com/spore-host/spawn/releases/download/v0.84.0/spawn_0.84.0_darwin_arm64.tar.gz"
+      sha256 "c01b9570378e52b60b2cc89586a01c51f62122be49d6ccea2c47c20d6b65a838"
 
       define_method(:install) do
         bin.install "spawn"
@@ -31,15 +31,15 @@ class Spawn < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/spawn/releases/download/v0.83.1/spawn_0.83.1_linux_amd64.tar.gz"
-      sha256 "a88c132262a980ef3203ea8ade27a7726d0197b7d0403edfa81dcf5c92a1fe45"
+      url "https://github.com/spore-host/spawn/releases/download/v0.84.0/spawn_0.84.0_linux_amd64.tar.gz"
+      sha256 "6e4dc962d89d72dbadcf4b4526231a9252b2e198ff2242a7083cfe396cea3163"
       define_method(:install) do
         bin.install "spawn"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/spawn/releases/download/v0.83.1/spawn_0.83.1_linux_arm64.tar.gz"
-      sha256 "66aa667d4d32cee31942867b99c4c88c716cf015a1edc5731db006925935b0d8"
+      url "https://github.com/spore-host/spawn/releases/download/v0.84.0/spawn_0.84.0_linux_arm64.tar.gz"
+      sha256 "811a1167caba34f89b532e47bb4ff6b87eb83ecc4ce7ea0d4b844acfb6c0e837"
       define_method(:install) do
         bin.install "spawn"
       end
