@@ -5,21 +5,21 @@
 class SporeHostMcp < Formula
   desc "MCP server for AI assistants — manage EC2 instances and discover capacity"
   homepage "https://github.com/spore-host/spore-host-mcp"
-  version "0.37.0"
+  version "0.38.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.37.0/spore-host-mcp_0.37.0_darwin_amd64.tar.gz"
-      sha256 "f1a75a1a64842601af724e4294d18a0398e524c59d6567991954dea1b58dd7c3"
+      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.38.0/spore-host-mcp_0.38.0_darwin_amd64.tar.gz"
+      sha256 "91b5b261eb6e98d3a54b7db95a585cd051532909f4ab7e3ef6c8a0823e85181e"
 
       define_method(:install) do
         bin.install "spore-host-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.37.0/spore-host-mcp_0.37.0_darwin_arm64.tar.gz"
-      sha256 "8e83850ecb7611748907f6b38bc376e19896b500e33c75cad4164b333e4f8f48"
+      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.38.0/spore-host-mcp_0.38.0_darwin_arm64.tar.gz"
+      sha256 "e5344d53bc923d375d128f721ecb371c5cefd5e7c3b740da344a7487692e536f"
 
       define_method(:install) do
         bin.install "spore-host-mcp"
@@ -29,15 +29,15 @@ class SporeHostMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.37.0/spore-host-mcp_0.37.0_linux_amd64.tar.gz"
-      sha256 "174d5249fbdf12eee34e40cfeda56f5223d68882429ea091285867e8fb6f0513"
+      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.38.0/spore-host-mcp_0.38.0_linux_amd64.tar.gz"
+      sha256 "fbe5bd127734f6635aae26fa9eaf15b2b34a403ee74eb31ec4d83855078b1dfe"
       define_method(:install) do
         bin.install "spore-host-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.37.0/spore-host-mcp_0.37.0_linux_arm64.tar.gz"
-      sha256 "7cec41a1ca809ccb92d6dbd14467a1b2fd43de72b676562002850afb07dfd342"
+      url "https://github.com/spore-host/spore-host-mcp/releases/download/v0.38.0/spore-host-mcp_0.38.0_linux_arm64.tar.gz"
+      sha256 "a3eb943379ff8d64ef6f595e946317bb01a1ecd3bff5f037c825b035f1441d86"
       define_method(:install) do
         bin.install "spore-host-mcp"
       end
