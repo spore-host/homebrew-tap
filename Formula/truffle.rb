@@ -5,21 +5,21 @@
 class Truffle < Formula
   desc "Find and discover AWS EC2 instance types"
   homepage "https://github.com/spore-host/truffle"
-  version "0.57.0"
+  version "0.57.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/spore-host/truffle/releases/download/v0.57.0/truffle_0.57.0_darwin_amd64.tar.gz"
-      sha256 "0702419dea06bfa4647c0d6e9b214e009ef35a652d8e5443dd58c886357bd74d"
+      url "https://github.com/spore-host/truffle/releases/download/v0.57.1/truffle_0.57.1_darwin_amd64.tar.gz"
+      sha256 "da80a9eef35a8001a721b4cdf518ce5673f622b13f0e24af1860e4acea409dd7"
 
       define_method(:install) do
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/spore-host/truffle/releases/download/v0.57.0/truffle_0.57.0_darwin_arm64.tar.gz"
-      sha256 "07c4d0cc44f0cb655d0f38486cb3d98dc51e2add80f53213d3fa183d3870d657"
+      url "https://github.com/spore-host/truffle/releases/download/v0.57.1/truffle_0.57.1_darwin_arm64.tar.gz"
+      sha256 "f36b6517b229bd3ed103c77c4469dca599804705734df1ad8bc59477a707d92e"
 
       define_method(:install) do
         bin.install "truffle"
@@ -29,15 +29,15 @@ class Truffle < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/truffle/releases/download/v0.57.0/truffle_0.57.0_linux_amd64.tar.gz"
-      sha256 "244023a694684cae79000ca3982c119bdb59d0c2d8d08b1a6b47facb769f5417"
+      url "https://github.com/spore-host/truffle/releases/download/v0.57.1/truffle_0.57.1_linux_amd64.tar.gz"
+      sha256 "48372276e59004e20c5224f96647924a3bd2d20914c1868d170b151d23e5cce6"
       define_method(:install) do
         bin.install "truffle"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/truffle/releases/download/v0.57.0/truffle_0.57.0_linux_arm64.tar.gz"
-      sha256 "25fe7c8ad19da1eff3bf332097233889f07ad7b0844a0daa554c747ddd6a721d"
+      url "https://github.com/spore-host/truffle/releases/download/v0.57.1/truffle_0.57.1_linux_arm64.tar.gz"
+      sha256 "7f83bd4fb247f3d345da932e4e03e2a14ef6862f83291dbe5a8e6cbbbcb510b8"
       define_method(:install) do
         bin.install "truffle"
       end
