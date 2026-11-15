@@ -14,8 +14,8 @@ Official Homebrew tap for [spore.host](https://spore.host) — tools for launchi
 ## Installation
 
 ```bash
-# Add the tap
-brew tap spore-host/tap
+# Add the tap and trust it (Homebrew 7 and later refuse untrusted taps)
+brew tap spore-host/tap && brew trust spore-host/tap
 
 # Install a tool
 brew install spore-host/tap/truffle
