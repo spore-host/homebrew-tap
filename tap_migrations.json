@@ -1,4 +1,6 @@
 {
   "truffle": "truffle",
-  "spawn": "spawn"
+  "spawn": "spawn",
+  "lagotto": "lagotto",
+  "spore-host-mcp": "spore-host-mcp"
 }
