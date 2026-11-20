@@ -5,15 +5,15 @@
 class Calque < Formula
   desc "Run Modal-shaped code on AWS, unchanged"
   homepage "https://github.com/spore-host/calque"
-  version "0.6.0"
+  version "0.7.0"
   license "Apache-2.0"
 
   depends_on "uv" => :runtime
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/spore-host/calque/releases/download/v0.6.0/calque_0.6.0_darwin_amd64.tar.gz"
-      sha256 "7f7b2f280c9230b9b9cb65a3e7232bc1018b0709d9be681ff7fa5fb072b58b76"
+      url "https://github.com/spore-host/calque/releases/download/v0.7.0/calque_0.7.0_darwin_amd64.tar.gz"
+      sha256 "72f2fdb6f8bfad8dc518344189191220b39c5c8677c2b78647ee061f30aa205a"
 
       define_method(:install) do
         libexec.install "pyast"
@@ -27,8 +27,8 @@ class Calque < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/spore-host/calque/releases/download/v0.6.0/calque_0.6.0_darwin_arm64.tar.gz"
-      sha256 "b512575e533886506b7920d13bce48f36928e0ff235b041ebe166ace7b5ff2f8"
+      url "https://github.com/spore-host/calque/releases/download/v0.7.0/calque_0.7.0_darwin_arm64.tar.gz"
+      sha256 "be35a02b953759adc3e793790dc1ce1325efd9373dd2ee3c037bb495633ac26a"
 
       define_method(:install) do
         libexec.install "pyast"
@@ -45,8 +45,8 @@ class Calque < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/calque/releases/download/v0.6.0/calque_0.6.0_linux_amd64.tar.gz"
-      sha256 "722113202a59bb62c13eb4d3c278ee58a2a77e993ebbcd83b5d619786c47b9e1"
+      url "https://github.com/spore-host/calque/releases/download/v0.7.0/calque_0.7.0_linux_amd64.tar.gz"
+      sha256 "76fe8519453528a033df98e4990e5faddd6922c1ed1be336e3898fe70a1f1848"
       define_method(:install) do
         libexec.install "pyast"
         (bin/"calque").write <<~SH
@@ -59,8 +59,8 @@ class Calque < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spore-host/calque/releases/download/v0.6.0/calque_0.6.0_linux_arm64.tar.gz"
-      sha256 "29f3e2dc68691de93c9bc1d38db327a633ae31056ebc8325489bd0dba1a3fc4a"
+      url "https://github.com/spore-host/calque/releases/download/v0.7.0/calque_0.7.0_linux_arm64.tar.gz"
+      sha256 "f378c4914f47fa696afc556d9d71a6f8d4584cd30e9f61eada9bc511bfc28b3c"
       define_method(:install) do
         libexec.install "pyast"
         (bin/"calque").write <<~SH
